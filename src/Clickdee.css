@@ -1,0 +1,43 @@
+
+
+.mainContainer{
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 100px;
+    }
+
+.mainTitle{
+    width: clamp(250px , 45%, 100%);
+}
+
+.cards {
+    width: 250px;
+    height: 40vh;
+    padding: 30px 40px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    
+
+}
+
+.cards.gray{
+    background-color: rgb(246, 246, 246);
+}
+.mainTitle h1{
+    font-size: 2rem;
+
+}
+.cards:hover{
+    transform: translateY(-20px);
+}
+
+.subtitle {
+    transition-delay:0.3s;
+}
