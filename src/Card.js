@@ -7,15 +7,12 @@ import './Clickdee.css'
 const Card = ({title, icon, index, subtitle}) => {
 
     const [hovered, setHovered] = useState(false)
-    const hoverHandler = () => {
-        setHovered(true)
-    }
+
   return (
     <div onMouseEnter = {() => setHovered(true)} onMouseLeave = {() => setHovered(false)}className={index % 2 === 0 ? "cards gray" : "cards"}>
-        <p>{icon}</p>
-        <h1>{title}</h1>
-        {hovered && <p style={{transition: "0.5s ease"}}>{subtitle}</p>}
-
+        <img className='icons' src={icon}></img>
+        <p className='title'>{title}</p>
+       {hovered && <p className='subtitle'>{subtitle}</p> }
 
     </div>
   )

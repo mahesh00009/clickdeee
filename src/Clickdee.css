@@ -1,43 +1,89 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+:root{
+    --font-color: #001B5D;
+}
 
 .mainContainer{
-
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     box-sizing: border-box;
-    padding: 20px 100px;
+    padding-left: 100px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    justify-content: flex-end;
+    gap:20px
+    
     }
 
-.mainTitle{
-    width: clamp(250px , 45%, 100%);
+.mainContainer .mainTitle{
+    width: clamp(200px , 45%, 90%);
+    color: var(--font-color);
+    text-align: left;
+}
+
+.mainTitle h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.mainTitle p{
+    font-size: 19px;
 }
 
 .cards {
     width: 250px;
     height: 40vh;
-    padding: 30px 40px;
-    flex-wrap: wrap;
-    margin-left: auto;
-    transition: 0.2s ease-in;
+    padding: 30px 60px;
     cursor: pointer;
-    
-
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.2s ease-in;
 }
 
 .cards.gray{
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(241, 240, 240);
 }
-.mainTitle h1{
-    font-size: 2rem;
 
+.cards > .title{
+    color: var(--font-color);
+    font-weight: 300;
+    font-size: 1.5rem;
 }
+
 .cards:hover{
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(1.05);
 }
 
-.subtitle {
-    transition-delay:0.3s;
+.cards .subtitle{
+    font-size: 16px;
+}
+
+.cards img.icons {
+    width: 60px;
+    height: 60px;
+}
+
+@media(max-width: 500px){
+    .mainContainer{
+        padding: 20px;
+        overflow: auto;
+    }
+    .mainContainer .mainTitle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vh;
+
+    }
+    .cards{
+        margin: 30px auto;
+    }
 }
