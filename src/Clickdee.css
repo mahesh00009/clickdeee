@@ -47,6 +47,51 @@
     flex-direction: column;
     gap: 20px;
     transition: 0.3s ease-in;
+    overflow: hidden;
+    position: relative;
+}
+.hoverContainer, .whiteContainer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    background-color: rgba(247, 247, 247, 0.637);
+    transform-origin: center;
+}
+
+.hoverContainer {
+    animation: hoverAnimation 0.4s linear forwards;
+
+}
+
+.whiteContainer {
+    animation: whiteAnimation 0.4s linear forwards;
+}
+    
+
+@keyframes hoverAnimation {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 600px;
+        height: 600px;
+    }
+    
+}
+@keyframes whiteAnimation {
+    0%{
+        width: 600px;
+        height: 600px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+    
 }
 
 .cards.gray{

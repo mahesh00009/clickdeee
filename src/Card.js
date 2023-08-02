@@ -13,6 +13,14 @@ const Card = ({title, icon, index, subtitle}) => {
         <img className='icons' src={icon}></img>
         <p className='title'>{title}</p>
 
+        {
+          hovered &&  <div className={index % 2 === 0 ? "hoverContainer" : ""}></div>
+        }
+
+        {
+          !hovered &&  <div className="whiteContainer"></div>
+        }
+
         <p className = "subtitle" style={{opacity : hovered ? "1" : 0}}>{subtitle}</p>
 
 
